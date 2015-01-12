@@ -8,8 +8,37 @@
 #ifndef SRC_NODE_H_
 #define SRC_NODE_H_
 
+#include <iostream>
+#include "ros/ros.h"
+#include "std_msgs/String.h"
+#include <pcl_ros/point_cloud.h>
+
+ #include "cv.h"
+#include "highgui.h"
+#include "opencv2/imgproc/imgproc.hpp"
+
+//for publishing and subscribing to images
+//in ROS allows you to subscribe to compressed image streams
+#include <image_transport/image_transport.h>
+
+//includes the header for CvBridge as well as some useful constants and functions related to image encodings
+#include <cv_bridge/cv_bridge.h>
+#include <sensor_msgs/image_encodings.h>
+
+//Includes the headers for OpenCV's image processing and GUI modules
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+
+#include <opencv2/video/background_segm.hpp>
+
+using namespace ros;
+using namespace sensor_msgs;
+using namespace std;
+using namespace cv;
+namespace enc = sensor_msgs::image_encodings;
 #include"waterfilling.h"
-#include"ImageProcess.h"
+
 
 class Subscribe_Depth {
 	cv_bridge::CvImagePtr cv_ptr;
