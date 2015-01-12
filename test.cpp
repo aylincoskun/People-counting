@@ -6,8 +6,6 @@
  */
 
 #include"node.h"
-#include"ImageProcess.h"
-
 
 
 
@@ -27,7 +25,7 @@ int main(int argc, char **argv)
         spin_rate.sleep();
     }
 
-   //depthSubtraction();
+
 
 
 
